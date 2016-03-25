@@ -10,3 +10,10 @@ sourceSets {
         }
     }
 }
+
+task(run, dependsOn: 'classes', type: JavaExec) {
+    main = 'rniesler.FileRename'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+defaultTasks 'run'
