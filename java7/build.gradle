@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+}
+
+task(run, dependsOn: 'classes', type: JavaExec) {
+    main = 'rniesler.FileRename'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+defaultTasks 'run'
