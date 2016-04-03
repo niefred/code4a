@@ -1,4 +1,4 @@
-var dir = 'test'
+var dir = 'c:\lun\test'
 var fs = require('fs')
 fs.readdir(dir, function(err,fileNames) {
   if(err) {
